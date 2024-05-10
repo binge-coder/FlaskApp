@@ -1,0 +1,38 @@
+<head>
+    <link rel="stylesheet" href="../static/styles/mystyle.css">
+</head>
+
+<h2>Data Science Salary Predictor</h2>
+
+<form action="{{ url_for('form') }}" method="post">
+	<p>Job rating (satisfaction level)</p>
+    <input type="text" name="Rating" placeholder="Job Rating (out of 5)" required="required" />
+    <br>
+	<p>Your Age</p>
+    <input type="text" name="Age" placeholder="Age" required="required" />
+    <br>
+    <p>SKILLS known</p>
+    <input type="checkbox" name="Python" value="1"> Python
+    <br>
+    <input type="checkbox" name="spark" value="1"> Spark
+    <br>
+    <input type="checkbox" name="aws" value="1"> AWS
+    <br>
+    <input type="checkbox" name="excel" value="1"> Excel
+    <br>
+    <input type="checkbox" name="sql" value="1"> SQL
+    <br>
+    <input type="checkbox" name="scikit" value="1"> Scikit Learn
+    <br>
+    <input type="checkbox" name="tensor" value="1"> TensorFlow
+    <br>
+    <input type="checkbox" name="tableau" value="1"> Tableau
+    <br>
+    <br>
+
+    <button type="submit" class="btn btn-primary btn-block btn-large">SUBMIT</button>
+    <br>
+    <br>
+
+    <b class="myresult">Expected Salary : <span>{{result}}</span> Thousand Dollars</b>
+</form>
